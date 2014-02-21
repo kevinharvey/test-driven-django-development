@@ -1,0 +1,83 @@
+{% load url from future %}
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Torquemada</title>
+  
+	<link rel="stylesheet" href="//fiflasoccer.com/a/c/f/foundation-3.2.2.css">
+	<link rel="stylesheet" href="//fiflasoccer.com/a/c/app.css">
+	
+	<style type="text/css">
+		h1, h3 {
+			font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		}
+		#trq-get-code {
+			float: right;
+		}
+	</style>
+
+	<script src="//fiflasoccer.com/a/j/f/modernizr.foundation-3.2.2.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	
+	<div class="row">
+		
+		<div class="twelve columns">
+			
+			<a href="https://github.com/kcharvey/testing-in-django" class="small button" id="trq-get-code">Get the Code</a>
+		
+			<h1 id="trq-heading">Torquemada</h1>
+
+			<form action="/ask/" method="POST">{% csrf_token %}
+				{{ form }}
+				<input id="trq-submit-question" type="submit" value="Submit your question">
+			</form>
+	
+			<hr />
+
+			{% for question in current_questions %}
+			<div id="trq-question-{{ question.id }}" class="trq-question panel">
+	
+				<h4>{{ question.text }}</h4>
+			
+				<span class="trq-vote-count">Votes: {{ question.votes }}</span>
+	
+				<p>
+					<a class="trq-vote-up" href="{% url 'vote' question.id 'up' %}">vote up</a> | 
+					<a class="trq-vote-down" href="{% url 'vote' question.id 'down' %}">vote down</a>
+				</p>
+
+			</div>
+			{% endfor %}
+		
+		</div>
+	
+	</div>
+	
+	<!-- Included JS Files (Compressed) -->
+	<script src="//fiflasoccer.com/a/j/f/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="//fiflasoccer.com/a/j/f/foundation-3.2.2.min.js"></script>
+
+	<!-- Initialize JS Plugins -->
+	<script type="text/javascript" src="//fiflasoccer.com/a/j/f/app-3.2.2.js"></script>
+
+</body>
+</html>
