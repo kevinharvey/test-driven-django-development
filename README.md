@@ -12,3 +12,8 @@ Just wanna see some Selenium fireworks? Grab this code and run these commands in
     pip install selenium
     python manage.py test questions.QuestionsTest
 
+Slides
+------
+
+Pull the repo, it's in the root dir :)
+
