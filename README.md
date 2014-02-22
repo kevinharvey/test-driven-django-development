@@ -1,7 +1,7 @@
 Test-driven Django Development
 =================
 
-This Django project exists solely for the education and entertainment of those Pythonistas attending Kevin Harvey's talk "Test-driven Django Development" at PyTennessee on February 21, 2014.
+This Django project exists solely for the education and entertainment of those Pythonistas attending Kevin Harvey's talk "Test-driven Django Development" at PyTennessee on February 22, 2014.
 
 Quickstart
 ----------
