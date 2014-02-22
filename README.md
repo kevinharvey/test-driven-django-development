@@ -15,5 +15,5 @@ Just wanna see some Selenium fireworks? Grab this code and run these commands in
 Slides
 ------
 
-Pull the repo, it's in the root dir :)
+Pull the 'with-slides' branch, it's in the root dir :)
 
