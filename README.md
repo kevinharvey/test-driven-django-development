@@ -1,7 +1,7 @@
-Testing In Django
+Test-driven Django Development
 =================
 
-This Django project exists solely for the education and entertainment of those Djangonauts attending Kevin Harvey's talk "Testing in Django (browser testing too)" at the Django Boston Meetup on January 17, 2013.
+This Django project exists solely for the education and entertainment of those Pythonistas attending Kevin Harvey's talk "Test-driven Django Development" at PyTennessee on February 21, 2014.
 
 Quickstart
 ----------
